@@ -1,0 +1,43 @@
+import tkinter
+from tkinter import messagebox
+root=tkinter.Tk()
+root.title("My First project Page")
+root.config(bg="#ffb3ec")
+root.geometry("400x400")
+root.maxsize(400,400)
+root.minsize(400,400)
+
+
+def login():
+    u=e1.get()
+    p=e2.get()
+    if u=="life" and p=="tech":
+        print("successfully login")
+    else:
+        print("login credential")
+
+
+l1=tkinter.Label(root,text="Login Page",bg="black",fg="white",font="arial 14")
+l1.pack()
+
+user=tkinter.Label(root,text="User Name",bg="#ffb3ec",fg="black",font="arial 12")
+user.place(x=10,y=50)
+
+e1=tkinter.Entry()
+e1.place(x=120,y=50)
+
+user=tkinter.Label(root,text="Password",bg="#ffb3ec",fg="black",font="arial 12")
+user.place(x=10,y=100)
+
+e2=tkinter.Entry(show="*")
+e2.place(x=120,y=100)
+
+b1=tkinter.Button(root,text="Login",bg="black",fg="white",font="arial 12",command=login)
+b1.place(x=10,y=150)
+
+b2=tkinter.Button(root,text="Cancel",bg="black",fg="white",font="arial 12",command=quit)
+b2.place(x=120,y=150)
+
+
+root.mainloop()
+
